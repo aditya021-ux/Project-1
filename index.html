@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FreshHire: find entry-level jobs, build your profile, upload your resume and track your applications." />
+  <meta name="theme-color" content="#0b0d14" />
+  <title>FreshHire · Job Portal for Freshers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <a href="#/jobs" class="brand">
+      <span class="logo">F</span>
+      <span>FreshHire</span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#/jobs" data-route="jobs">Jobs</a>
+      <a href="#/applications" data-route="applications">
+        Applications <span class="badge" id="appCount">0</span>
+      </a>
+      <a href="#/profile" data-route="profile">Profile</a>
+      <a href="#/about" data-route="about">About</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main id="app" class="container" aria-live="polite"></main>
+
+  <!-- Job details modal (bottom sheet on phones) -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card" id="modalContent"></div>
+  </div>
+
+  <div id="toast" class="toast" role="status"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
